@@ -45,7 +45,44 @@ let objects = [
     }
 ];
 
+//generate some more flowers...
+class Flower {
+    constructor(top, left) {
+        this.type = "flower-tile";
+        this.top = top;
+        this.left = left;
+        this.isEntered = false;
+        this.show = true;
+    }
 
+    runBehavior(name, player) {
+        let self = this;
+        console.log(player)
+        if (name === 'onEnter') {
+
+            if (self.isEntered === false) {
+                if (_.has(player, 'flowers')) {
+                    player.flowers += 1;
+                } else {
+                    player.flowers = 1;
+                }
+
+                console.log(player.flowers);
+                this.isEntered = true;
+                this.show = false;
+            }
+        }
+    }
+}
+objects.push(new Flower(1, 1));
+_.times(500, function() {
+
+    let top = _.random(0,99);
+    let left = _.random(0,99);
+    if (getObjectsOnTile(objects, top, left).length === 0){
+        objects.push(new Flower(top, left))
+    }
+});
 
 function getObjectsHtml(objects, top, left) {
     let html = '';
@@ -125,9 +162,12 @@ let player = {
         let objectsOnTile = getObjectsOnTile(objects, newPosition.top, newPosition.left);
         if (objectsOnTile.length > 0) {
             _.forEach(objectsOnTile, function (object) {
-                if (_.has(object, 'runBehavior')) {
-                    object.runBehavior('onEnter');
+                try {
+                    object.runBehavior('onEnter', player);
+                } catch (e) {
+                    console.log('no behavior found...');
                 }
+
             })
         }
         else {
