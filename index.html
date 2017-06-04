@@ -1,0 +1,40 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/style.css">
+  </head>
+  <body style=" font-family: Consolas;">
+
+    
+    <div id="myDiv" style="font-size: 150%"></div>
+    <div style="clear:both">
+      
+    </div>
+    <div id="player" style="float:left; border: 1px solid green; padding: 5px">
+      Debug:<br>
+      Position: <span class="player-position"></span><br>
+      Health: <span class="player-health"></span><br>
+      <span class="player-flowers" style="color: pink"></span>
+    </div>
+    <script src="http://localhost:8080/webpack-dev-server.js"></script>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="public/bundle.js"></script>
+
+  </body>
+</html>

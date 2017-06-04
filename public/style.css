@@ -1,0 +1,139 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+
+h1 {
+  font-weight: bold;
+  color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
+
+
+.ground-tile {
+  width: 22px; 
+  height: 22px;
+  float:left;
+  background-color: #86b05f;
+}
+
+.x-tile {
+  background-color: #7c6244;
+  width: 22px;
+  height: 22px;
+  float:left;
+}
+
+.flower-tile {
+  background:#86b05f url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fflower.png?1496495470157) no-repeat;
+  width: 22px;
+  height: 22px;
+  float:left;
+}
+
+.player-tile {
+  float: left;
+  width: 22px; 
+  height: 22px; 
+  background:url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fchar.png?1496239016921) 2px -5px;
+}
+
+.player-tile-down {
+  float: left;
+  width: 22px; 
+  height: 22px; 
+  background:url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fchar.png?1496239016921) 61px -5px;
+}
+
+.player-tile-up {
+  float: left;
+  width: 22px; 
+  height: 22px; 
+  background:url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fchar.png?1496239016921) 61px -36px;
+}
+
+.player-tile-left {
+  float: left;
+  width: 22px; 
+  height: 22px; 
+  background:url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fchar.png?1496239016921) 61px -66px;
+}
+
+.player-tile-right {
+  float: left;
+  width: 22px; 
+  height: 22px; 
+  background:url(https://cdn.glitch.com/b1973581-8115-41a6-984e-e85c4b1fd478%2Fchar.png?1496239016921) 61px -95px;
+}
